@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exo3</title>
+    <link rel="stylesheet" href="hello.css">
 </head>
 <body>
     
-hello world
+<div class="container">
+
+  <h2>registration form</h2> 
+  <form action="#" id="registration-form">
+    <div class="form">
+    <h3>personal information</h3>
+        <div class="name">
+            <label for="name">name : </label>
+            <input type="text" id="name" name="name" >
+        </div>
+        <div class="first-name">
+            <label for="first-name">first-name :</label>
+            <input type="text" id="first-name" name="first-name">
+        </div>
+        <div class="date-of-birth">
+            <label for="date-of-birth">date of birth :</label>
+            <input type="date" id="date-of-birth" name="date-of-birth">
+        </div>
+        <div class="gender">
+            <h4>gender :</h4>
+            <label for="gender">male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="gender">female</label>
+            <input type="radio" name="gender" id="female">
+
+        </div>
+        <div class="country">
+            <label for="country">country :</label>
+            <input list="countries" name="country" id="country" type="text" placeholder="--select a country--">
+            <datalist id="countries">
+                <option value="dz"></option>
+                <option value="us"></option>
+                <option value="fr"></option>
+                <option value="in"></option>
+                <option value="sd"></option>
+
+            </datalist>
+        </div>
+        </div> 
+        <p id="ageWarning" class="error-message hidden">You must be at least 12 years old to access this service.</p>
+
+<div class="sub-re">
+    <input id="sub" type="submit" value="Submit">
+    <input id="res" type="reset" value="Reset">
+</div> 
+</form>
 
 
+
+</div>
+<script src="hello.js" defer></script>
 
 </body>
+
 </html>
