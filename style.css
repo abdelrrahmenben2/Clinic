@@ -9,8 +9,8 @@
     --border:.2rem solid var(--green);
 }
 *{
-    font-family: "poppins", sans-serif;
     margin: 0; padding: 0;
+    font-family: "poppins", sans-serif;
     box-sizing: border-box;
     outline:none; border: none;
     text-transform: capitalize;
@@ -459,5 +459,23 @@ z-index: 0;
 .review .box-container .box .stars i{
     color: #fff;
     font-size: 1.5rem;
+}
+.review .box-container .box .text{
+    color: var(--light-color);
+    line-height: 1.8rem;
+    font-size: 1.6rem;
     padding-top: 4rem;
 }
+.review .box-container .box::before{
+content: '';
+position: absolute;
+top: -4rem;left: 50%;
+transform: translateX(-50%);
+background: var(--green);
+border-bottom-left-radius: 50%;
+border-bottom-right-radius: 50%;
+height: 25rem;
+width: 120%;
+z-index: -1;
+}
+
