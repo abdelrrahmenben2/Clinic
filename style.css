@@ -6,7 +6,7 @@
     --light-color:#777;
     --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
     --box-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
-    --border:.2rem solid var(--green);
+    --border:.3rem solid var(--green);
 }
 *{
     margin: 0; padding: 0;
@@ -578,5 +578,4 @@ object-fit: cover;
 }
 .footer .credit span{
     color: var(--green);
-    
 }
