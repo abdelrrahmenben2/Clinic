@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --green: #16a085;
+      --black: #444;
+      --light-color: #777;
+      --box-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+      --border: 0.3rem solid var(--green);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      transition: all 0.2s ease-out;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    section {
+      padding: 2rem 9%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: var(--box-shadow);
+      border: var(--border);
+      padding: 3rem;
+      max-width: 90rem;
+      width: 100%;
+    }
+
+    .login .row .image {
+      flex: 1 1 40rem;
+      text-align: center;
+    }
+
+    .login .row .image img {
+      max-width: 100%;
+    }
+
+    .login .row form {
+      flex: 1 1 40rem;
+      text-align: center;
+    }
+
+    .login .row form h3 {
+      color: var(--black);
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .login .row form .box {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+      border: var(--border);
+      margin: 1rem 0;
+      text-transform: none;
+    }
+
+    .login .row form .btn {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 1rem 4rem;
+      font-size: 1.7rem;
+      color: var(--green);
+      border: var(--border);
+      border-radius: 0.5rem;
+      box-shadow: var(--box-shadow);
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .login .row form .btn:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .login-text {
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      color: var(--light-color);
+    }
+
+    .login-text a {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Register Section -->
+  <section class="login" id="register">
+    <div class="row">
+      <form action="register.php" method="post">
+        <h3>Register now</h3>
+
+        <input type="text" placeholder="Enter your name" class="box" required>
+        <input type="email" placeholder="Enter your email" class="box" required>
+        <input type="password" placeholder="Create a password" class="box" required>
+        <input type="password" placeholder="Confirm password" class="box" required>
+
+        <input type="submit" value="Register" class="btn">
+
+        <p class="login-text">Already have an account?
+          <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

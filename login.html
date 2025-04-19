@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | HealthCare</title>
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+    
+    <style>
+        /* Additional login-specific styles */
+        .login .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 5rem 9%;
+        }
+
+        .login .row .image {
+            flex: 1 1 45rem;
+        }
+
+        .login .row .image img {
+            width: 100%;
+        }
+
+        .login .row form {
+            flex: 1 1 45rem;
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: .5rem;
+        }
+
+        .login .row form h3 {
+            color: var(--black);
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        .login .row form .box {
+            width: 100%;
+            margin: 1rem 0;
+            border-radius: .5rem;
+            border: var(--border);
+            font-size: 1.6rem;
+            color: var(--black);
+            padding: 1rem;
+            text-transform: none;
+        }
+
+        .login .row form .btn {
+            padding: 1rem 4rem;
+            font-size: 1.7rem;
+            margin-top: 1rem;
+        }
+
+        .login-text {
+            font-size: 1.4rem;
+            color: var(--light-color);
+            margin-top: 1.5rem;
+        }
+
+        .login-link {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+            color: #12856f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <section class="login" id="login">
+        <div class="row">
+            <form action="login.php" method="post">
+                <h3>login now</h3>
+
+                <input type="email" name="email" placeholder="Enter your email" class="box" required>
+                <input type="password" name="password" placeholder="Enter your password" class="box" required>
+
+                <input type="submit" value="Login" class="btn">
+
+                <p class="login-text">Don't have an account?
+                    <a href="register.html" class="login-link">Register now</a>
+                </p>
+                <p class="login-text">
+                    <a href="#" class="login-link">Forgot your password?</a>
+                </p>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>
