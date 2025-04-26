@@ -109,9 +109,6 @@ section:nth-child(even){
     color: var(--light-color);
     margin-left: 2rem;
 }
-.header .navbar .login{
-    
-}
 
 .header .navbar a:hover{
     color: var(--green);
