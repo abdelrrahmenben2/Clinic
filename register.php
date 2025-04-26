@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
-
+    $phone = $_POST['phone'] ?? '';
     // Validation
     if ($password !== $confirm_password) {
         die("Passwords do not match.");
@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insert user
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $hashed_password);
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password, phone) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $hashed_password, $phone);
     
     if ($stmt->execute()) {
         echo "Registration successful!";

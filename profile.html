@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #16a085;
+    }
+    p {
+      font-size: 18px;
+    }
+    a.btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #16a085;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.btn:hover {
+      background-color: #138d75;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, <?php echo htmlspecialchars($userData['username']); ?>!</h2>
+    <p>Email: <?php echo htmlspecialchars($userData['email']); ?></p>
+    <a href="logout.php" class="btn">Logout</a>
+  </div>
+</body>
+</html>

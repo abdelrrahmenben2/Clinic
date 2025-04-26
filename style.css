@@ -74,7 +74,7 @@ section:nth-child(even){
 
 .btn:hover{
     background: var(--green);
-    color: #fff;
+    color: #ffffff;
 }
 
 .btn:hover span{
@@ -114,7 +114,9 @@ section:nth-child(even){
 .header .navbar a:hover{
     color: var(--green);
 }
-
+.header .navbar  a.btn:hover{
+    color: floralwhite;
+}
 #menu-btn{
     font-size: 2.5rem;
     border-radius: .5rem;
