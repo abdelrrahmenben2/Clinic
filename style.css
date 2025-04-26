@@ -82,7 +82,6 @@ section:nth-child(even){
     margin-left: 1rem;
 }
 
-
 .header{
     padding: 2rem 9%;
     position: fixed;
@@ -109,6 +108,9 @@ section:nth-child(even){
     font-size: 1.7rem;
     color: var(--light-color);
     margin-left: 2rem;
+}
+.header .navbar .login{
+    
 }
 
 .header .navbar a:hover{
