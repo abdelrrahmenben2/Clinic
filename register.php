@@ -40,16 +40,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insert user
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password, phone) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $hashed_password, $phone);
+    $stmt = $conn->prepare("INSERT INTO users (username, email, tel, password) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $username, $email, $phone, $hashed_password);
     
-    if ($stmt->execute()) {
-        echo "Registration successful!";
+
+        if ($stmt->execute()) {
+            echo "<script>
+                alert('Registration successful!');
+                window.location.href = 'login.html';
+            </script>";
+        }
+
+
     } else {
         echo "Something went wrong: " . $stmt->error;
     }
 
     $stmt->close();
     $conn->close();
-}
+
 ?>

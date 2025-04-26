@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
 
-            echo "Hello, {$user['username']}!";
+            // echo "Hello, {$user['username']}!";
 
             // Redirect if needed
-            // header('Location: dashboard.php');
+             header('Location: profile.php');
             exit;
         } else {
             echo "Incorrect password.";
