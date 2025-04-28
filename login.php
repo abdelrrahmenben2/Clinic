@@ -47,7 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // echo "Hello, {$user['username']}!";
 
             // Redirect if needed
-             header('Location: profile.php');
+            echo "<script>
+            alert('Login successful! Welcome, " . htmlspecialchars($user['username']) . "!');
+            window.location.href = 'profile.php';
+          </script>";
             exit;
         } else {
             echo "Incorrect password.";
