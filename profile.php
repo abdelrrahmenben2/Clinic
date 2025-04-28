@@ -6,12 +6,12 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-require_once 'includes/db_connect.php'; // database connection
+require_once 'db_connect.php'; // database connection
 
 $user_id = $_SESSION['user_id'];
 
 // Fetch user data
-$user_stmt = $conn->prepare("SELECT username, email, phone FROM users WHERE id = ?");
+$user_stmt = $conn->prepare("SELECT username, email, tel FROM users WHERE id = ?");
 $user_stmt->bind_param("i", $user_id);
 $user_stmt->execute();
 $user_result = $user_stmt->get_result();
@@ -41,7 +41,7 @@ $booking_result = $booking_stmt->get_result();
     <a href="#" class="logo"><i class="fas fa-user"></i> Profile</a>
 
     <nav class="navbar">
-        <a href="home.php">Home</a>
+        <a href="index.html">Home</a>
         <a href="logout.php" class="btn">Logout</a>
     </nav>
 </header>
@@ -55,10 +55,10 @@ $booking_result = $booking_stmt->get_result();
         <div class="box-container">
 
             <div class="box">
-                <i class="fas fa-user"></i>
-                <h3><?= htmlspecialchars($user['username']) ?></h3>
-                <p><i class="fas fa-envelope"></i> <?= htmlspecialchars($user['email']) ?></p>
-                <p><i class="fas fa-phone"></i> <?= htmlspecialchars($user['phone']) ?></p>
+                
+                <h3><i class="fas fa-user"></i><?= htmlspecialchars($user['username']) ?></h3>
+                <h3><i class="fas fa-envelope"></i> <?= htmlspecialchars($user['email']) ?></h3>
+                <h3><i class="fas fa-phone"></i> <?= htmlspecialchars($user['tel']) ?></h3>
             </div>
 
         </div>
@@ -73,20 +73,31 @@ $booking_result = $booking_stmt->get_result();
 
     <div class="services">
 
-        <div class="box-container">
+        <div class="box-container" style="overflow-x:auto;">
 
             <?php if ($booking_result->num_rows > 0): ?>
-                <?php while ($booking = $booking_result->fetch_assoc()): ?>
-                    <div class="box">
-                        <i class="fas fa-calendar-check"></i>
-                        <h3><?= htmlspecialchars($booking['name']) ?></h3>
-                        <p><i class="fas fa-calendar"></i> Date: <?= htmlspecialchars($booking['date']) ?></p>
-                        <p><i class="fas fa-envelope"></i> <?= htmlspecialchars($booking['email']) ?></p>
-                        <p><i class="fas fa-phone"></i> <?= htmlspecialchars($booking['number']) ?></p>
-                    </div>
-                <?php endwhile; ?>
+                <table style="width: 100%; border-collapse: collapse; text-align: left; background: #fff; border: var(--border); box-shadow: var(--box-shadow);">
+                    <thead style="background: var(--green); color: #fff;">
+                        <tr>
+                            <th style="padding: 1rem; font-size: 1.8rem;">Name</th>
+                            <th style="padding: 1rem; font-size: 1.8rem;">Date</th>
+                            <th style="padding: 1rem; font-size: 1.8rem;">Email</th>
+                            <th style="padding: 1rem; font-size: 1.8rem;">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($booking = $booking_result->fetch_assoc()): ?>
+                        <tr style="border-top: var(--border);">
+                            <td style="padding: 1rem; font-size: 1.6rem;"><?= htmlspecialchars($booking['name']) ?></td>
+                            <td style="padding: 1rem; font-size: 1.6rem;"><?= htmlspecialchars($booking['date']) ?></td>
+                            <td style="padding: 1rem; font-size: 1.6rem;"><?= htmlspecialchars($booking['email']) ?></td>
+                            <td style="padding: 1rem; font-size: 1.6rem;"><?= htmlspecialchars($booking['number']) ?></td>
+                        </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
             <?php else: ?>
-                <div class="box">
+                <div class="box" style="text-align:center;">
                     <h3>No Bookings Yet</h3>
                     <p>Make your first booking now!</p>
                 </div>
@@ -97,6 +108,7 @@ $booking_result = $booking_stmt->get_result();
     </div>
 
 </section>
+
 
 </body>
 </html>

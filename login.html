@@ -91,8 +91,8 @@
             <form action="login.php" method="post">
                 <h3>login now</h3>
 
-                <input type="email" name="email" placeholder="Enter your email" class="box" required>
-                <input type="password" name="password" placeholder="Enter your password" class="box" required>
+                <input type="email" name="email" placeholder="Enter your email" class="box" >
+                <input type="password" name="password" placeholder="Enter your password" class="box" >
 
                 <input type="submit" value="Login" class="btn">
 
@@ -103,9 +103,26 @@
                     <a href="#" class="login-link">Forgot your password?</a>
                 </p>
             </form>
+            <style>
+                /* Your input box style */
+                .box {
+                    width: 100%;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                    border: 2px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 1.6rem;
+                    transition: border-color 0.3s ease;
+                }
+                
+                /* Red border when error */
+                .box.error {
+                    border-color: red;
+                }
+                </style>
 
         </div>
     </section>
-
+    <script src="script.js"></script>
 </body>
 </html>

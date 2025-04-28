@@ -5,13 +5,13 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-require_once 'includes/db_connect.php';
+require_once 'db_connect.php';
 
 // Get form data
 $name = $_POST['name'] ?? '';
 $number = $_POST['number'] ?? '';
 $email = $_POST['email'] ?? '';
-$date = $_POST['tel'] ?? '';
+$date = $_POST['date'] ?? '';
 $user_id = $_SESSION['user_id'];
 
 // Validate
