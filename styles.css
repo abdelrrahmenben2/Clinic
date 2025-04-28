@@ -48,6 +48,76 @@
     font-style: normal;
   }
 /*
+
+
+@import url('styles.css');
+
+.profile {
+  padding: 4rem 9%;
+  background: #fff;
+}
+
+.profile h2 {
+  font-size: 2.4rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.profile p {
+  font-size: 1.8rem;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.profile-actions .btn {
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  color: var(--green);
+  background-color: #fff;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+}
+
+.profile-actions .btn:hover {
+  background-color: var(--green);
+  color: #fff;
+}
+
+/* Table Styling for Bookings */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+table th, table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #e5e5e5;
+}
+
 @font-face {
     font-family: 'Poppins';
     src: url('Poppins/Poppins-Thin.ttf') format('truetype');

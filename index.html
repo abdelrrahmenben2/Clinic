@@ -245,12 +245,12 @@
     <div class="image">
         <img src="cardiologist-animate.svg" alt="">
     </div>
-    <form action="">
+    <form action="handle_booking.php" method="post">
         <h3>book appointment</h3>
-        <input type="text" placeholder="your name" class="box">
-        <input type="number" placeholder="your number" class="box">
-        <input type="email" placeholder="your email" class="box">
-        <input type="date" class="box">
+        <input type="text" name="name" placeholder="your name" class="box">
+        <input type="number" name="tel" placeholder="your number" class="box">
+        <input type="email"  name="email" placeholder="your email" class="box">
+        <input type="date" name="date" class="box">
         <input type="submit" value="book now" class="btn">
     </form>
 </div>
