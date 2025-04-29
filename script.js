@@ -27,4 +27,4 @@ menu.onscroll = () =>{
     if (!valid) {
         e.preventDefault(); // stop form submission if fields are empty
     }
-});
+});*/
